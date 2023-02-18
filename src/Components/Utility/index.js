@@ -119,6 +119,24 @@ function Clipboard(props) {
                                     Verified : {verifed.verify.toString()} <br></br>
                                     {/* Proof : {verifed.proof} <br></br> */}
                                     Leaf : {verifed.leaf} <br></br>
+                             <button
+              class="mt-2 bg-transparent hover:bg-blue-500 text-darkText-700 font-medium hover:text-white py-2 px-4 border border-bordercolor "
+              onClick={() => {
+                navigator.clipboard.writeText(JSON.stringify(verifed.proof));
+                toast.dark("✨ Copied to clipboard", {
+                    toastClassName: "bg-darkText font-pt-mono text-darkText  ",
+                    className:
+
+                        "bg-darkText font-pt-mono text-darkText border-solid border-2 border-bordercolor",
+                    bodyClassName: "bg-darkText font-pt-mono text-darkText ",
+                    progressClassName: "bg-darkText font-pt-mono text-darkText ",
+                });
+
+              }}
+            >
+              Copy Proof to Clipboard
+            </button>
+                </>
                                 </>
                             }
 
