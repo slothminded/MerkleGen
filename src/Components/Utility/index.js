@@ -136,7 +136,7 @@ function Clipboard(props) {
             >
               Copy Proof to Clipboard
             </button>
-                </>
+                
                                 </>
                             }
 
